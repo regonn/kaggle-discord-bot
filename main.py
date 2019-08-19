@@ -22,7 +22,7 @@ async def on_ready():
     await channel.send('おはようございます。UTC 0時です。今日もKaggleやっていきましょ!!')
     competitions_list = api.competitions_list()
     for competition in competitions_list:
-        if getattr(competition, 'awardsPoints'):
+        if getattr(competition, 'awardsPoints') and not getattr(competition, 'submissionsDisabled'):
             deadline = getattr(competition, 'deadline')
             diff = deadline - dt.now()
             if diff.days > 0:
