@@ -15,19 +15,18 @@ client = discord.Client()
 api = KaggleApi()
 api.authenticate()
 
+
 @client.event
 async def on_ready():
     channel = client.get_channel(int(os.environ.get("CHANNEL_ID")))
-    await channel.send('おはようございます。今日もKaggleやっていきましょ!!')
+    await channel.send('おはようございます。UTC 0時です。今日もKaggleやっていきましょ!!')
     competitions_list = api.competitions_list()
     for competition in competitions_list:
         if getattr(competition, 'awardsPoints'):
             deadline = getattr(competition, 'deadline')
             diff = deadline - dt.now()
             if diff.days > 0:
-                await channel.send('==============================')
-                await channel.send(getattr(competition, 'title'))
-                await channel.send('期限まで、あと{}日です。'.format(diff.days))
+                await channel.send('(あと{}日): {}'.format(diff.days, getattr(competition, 'title')))
     print('We have logged in as {0.user}'.format(client))
     sys.exit(0)
 
