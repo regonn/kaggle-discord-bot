@@ -18,7 +18,7 @@ api.authenticate()
 
 @client.event
 async def on_ready():
-    channel = client.get_channel(int(os.environ.get("CHANNEL_ID")))
+    channel = client.get_channel(int(os.environ.get("DISCORD_CHANNEL_ID")))
     await channel.send('おはようございます。UTC 0時です。今日もKaggleやっていきましょ!!')
     competitions_list = api.competitions_list()
     for competition in competitions_list:
