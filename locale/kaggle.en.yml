@@ -1,0 +1,3 @@
+en:
+  hi: "Currently at UTC%{hour}. Let's get started Kaggle!!"
+  to_go: '(%{days} days to go)'

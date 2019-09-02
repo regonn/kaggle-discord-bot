@@ -1,0 +1,3 @@
+ja:
+  hi: 'UTC%{hour}時です。今日もKaggleやっていきましょ!!'
+  to_go: '(あと%{days}日)'
