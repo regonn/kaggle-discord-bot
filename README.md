@@ -42,6 +42,6 @@ DISCORD_CHANNEL_ID=
 KAGGLE_USERNAME=
 KAGGLE_KEY=
 
-# If this key is set, load dotenv values.
+# If this key is not set, load dotenv values.
 # PRODUCTION=True
 ```
