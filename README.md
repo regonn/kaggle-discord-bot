@@ -45,3 +45,28 @@ KAGGLE_KEY=
 # If this key is not set, load dotenv values.
 # PRODUCTION=True
 ```
+
+## Run on Heroku
+### Requirements
+
+- Heroku account
+- Credit card
+  - It does not take money, to sign up and deploy heroku
+- Kaggle API
+- Discord application
+
+### Usage
+1. Press button(`Deploy to Heroku`) and enter your app name and environment variables  
+  You need to enter your credit card information to use [Heroku Scheduler](https://devcenter.heroku.com/articles/scheduler).  
+  Standard plan is free, so please don't worry.
+
+![](img/enter-config-vars.png)
+
+
+2. Set task on Heroku
+
+![select scheduler](img/select-scheduler.png)
+
+Set frequency with daily and run command.
+
+![set schedule](img/set-schedule.png)
