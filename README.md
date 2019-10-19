@@ -22,7 +22,7 @@ PRODUCTION='何も設定されていないと dotenv が呼ばれる開発環境
 ```
 
 (※) KAGGLE系の環境変数は `KaggleApi` が呼ばれたタイミングで必要なので dotenv が利用できないです。
-pytho実行環境の環境変数に追加しておくか kaggle.json を設置してください。
+python実行環境の環境変数に追加しておくか kaggle.json を設置してください。
 
 ## Environment variables
 
