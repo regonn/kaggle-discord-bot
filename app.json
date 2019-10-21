@@ -1,0 +1,38 @@
+{
+  "name": "Kaggle Discord Bot",
+  "description": "Notify remaining days of kaggle competitions to Discord.",
+  "repository": "https://github.com/regonn/kaggle-discord-bot",
+  "keywords": ["kaggle", "discord"],
+  "env": {
+    "LOCALE": {
+      "description": "Now supports English(en) or Japanese(ja).",
+      "value": "en or ja"
+    },
+    "DISCORD_TOKEN": {
+      "description": "Discord Token",
+      "value": "your token"
+    },
+    "DISCORD_CHANNEL_ID": {
+      "description": "Discord Channel ID",
+      "value": "your channel id"
+    },
+    "KAGGLE_KEY": {
+      "description": "kaggle key",
+      "value": "your key"
+    },
+    "KAGGLE_USERNAME": {
+      "description": "kaggle username",
+      "value": "your username"
+    },
+    "PRODUCTION": {
+      "description": "Production",
+      "value": true
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-python"
+    }
+  ],
+  "addons": ["scheduler:standard"]
+}
